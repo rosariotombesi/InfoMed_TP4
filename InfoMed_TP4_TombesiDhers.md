@@ -13,7 +13,7 @@
 * La información se organiza en tablas (entidades) con filas (registros) y columnas (atributos), que se relacionan entre sí mediante claves primarias y foráneas. 
 
 ### 2. Armar el diagrama entidad-relación de la base de datos dada. 
-En primer lugar, se identifican las entidades y atributos
+En primer lugar, se identifican las entidades y atributos:
 * Paciente (entidad fuerte).
   Atributos: ID_Paciente (Clave primaria), Nombre, Fecha_Nacimiento, ID_Sexo (Clave foránea), Número, Calle y Ciudad.
 * Médico (entidad fuerte).
@@ -60,6 +60,8 @@ Una vez identificadas las entidades y sus atributos, se procede a identificar la
 * Una receta puede incluir varios medicamentos y un medicamento puede estar en varias recetas
 * Participación: Parcial para “Receta” porque puede haber recetas que no contengan medicamentos. Parcial para “Medicamentos” porque puede haber medicamentos dentro del catálogo que aún no hayan sido recetados.
 * Cardinalidad M:N
+
+En base a esto se obtiene el siguiente diagrama:
 
 ![image](https://github.com/user-attachments/assets/c3485c5d-9f6d-4a63-a6fd-4797880a9ce6)
 
