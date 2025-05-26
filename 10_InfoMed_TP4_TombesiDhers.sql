@@ -7,5 +7,5 @@ WHERE id_medico = 3
 SELECT *
 FROM consultas
 WHERE id_medico = 3
-  AND EXTRACT(YEAR FROM fecha_consulta) = 2024
-  AND EXTRACT(MONTH FROM fecha_consulta) = 8;
+  AND EXTRACT(YEAR FROM fecha) = 2024
+  AND EXTRACT(MONTH FROM fecha) = 8;
