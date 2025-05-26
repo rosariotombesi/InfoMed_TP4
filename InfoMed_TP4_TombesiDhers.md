@@ -13,7 +13,7 @@
 * La información se organiza en tablas (entidades) con filas (registros) y columnas (atributos), que se relacionan entre sí mediante claves primarias y foráneas. 
 
 ### 2. Armar el diagrama entidad-relación de la base de datos dada. 
-imagen
+![image](https://github.com/user-attachments/assets/c3485c5d-9f6d-4a63-a6fd-4797880a9ce6)
 
 ### 3. Armar el Modelo relacional de la base de datos dada.
 imagen
