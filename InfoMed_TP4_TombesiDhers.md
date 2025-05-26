@@ -306,3 +306,50 @@ ORDER BY m.nombre, p.nombre;
 ![image](https://github.com/user-attachments/assets/8737dcb5-c254-41e5-b91b-ea50b5b20a5f)
 ![image](https://github.com/user-attachments/assets/4997fa41-91d1-4306-94ae-00980ba66489)
 ![image](https://github.com/user-attachments/assets/6406f2fa-e564-4876-a913-0ccfdb933a6b)
+
+### 17. Obtener el nombre del medicamento junto con el total de recetas prescritas para ese medicamento, el nombre del médico que lo recetó y el nombre del paciente al que se le recetó, ordenado por total de recetas en orden descendente.
+
+```
+/* Asumo que se busca saber cuantas veces receto cada medico un medicamento especifico a cada paciente */
+
+SELECT m.nombre,
+       COUNT(r.id_receta) AS cant_recetas,
+       d.nombre,
+       p.nombre
+FROM recetas r
+JOIN medicamentos m ON r.id_medicamento = m.id_medicamento
+JOIN medicos d ON r.id_medico = d.id_medico
+JOIN pacientes p ON r.id_paciente = p.id_paciente
+GROUP BY m.nombre, d.nombre, p.nombre
+ORDER BY cant_recetas, m.nombre DESC;
+
+
+/* En otro caso, muestro por separado total de recetas por medicamento */
+
+SELECT m.nombre,
+       COUNT(r.id_receta) AS cant_recetas
+FROM recetas r
+JOIN medicamentos m
+    ON r.id_medicamento = m.id_medicamento
+GROUP BY m.nombre
+ORDER BY cant_recetas DESC;
+
+```
+![image](https://github.com/user-attachments/assets/f38febd9-5b66-420f-8557-9817cedc7086)
+![image](https://github.com/user-attachments/assets/d16fcb8f-417e-45b1-bc42-d8dc0ab32de6)
+![image](https://github.com/user-attachments/assets/5c3d063d-b898-4881-b3ca-4b037e5a6a94)
+![image](https://github.com/user-attachments/assets/b916f06d-ead4-47bd-ae9a-0f0aeed062d7)
+
+### 18. Obtener el nombre del médico junto con el total de pacientes a los que ha atendido, ordenado por el total de pacientes en orden descendente.
+
+```
+SELECT m.nombre,
+       COUNT(DISTINCT p.id_paciente) AS cant_p
+FROM consultas c
+JOIN medicos m ON m.id_medico = c.id_medico
+JOIN pacientes p ON c.id_paciente = p.id_paciente
+GROUP BY m.nombre
+ORDER BY cant_p DESC;
+
+```
+![image](https://github.com/user-attachments/assets/666c874e-989c-4628-af5a-a6b89c583623)
