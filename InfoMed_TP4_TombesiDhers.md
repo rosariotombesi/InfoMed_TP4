@@ -63,7 +63,8 @@ Una vez identificadas las entidades y sus atributos, se procede a identificar la
 
 En base a esto se obtiene el siguiente diagrama:
 
-![image](https://github.com/user-attachments/assets/c3485c5d-9f6d-4a63-a6fd-4797880a9ce6)
+![image](https://github.com/user-attachments/assets/0904bc89-6355-46ec-9420-484ab3155767)
+
 
 ### 3. Armar el Modelo relacional de la base de datos dada.
 
