@@ -68,7 +68,7 @@ En base a esto se obtiene el siguiente diagrama:
 
 ### 3. Armar el Modelo relacional de la base de datos dada.
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/4388c511-f609-4b00-bb42-82746d6afd3e)
 
 ### 4. Considera que la base de datos está normalizada. En caso que no lo esté, ¿cómo podría hacerlo?
 
